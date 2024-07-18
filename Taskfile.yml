@@ -1,0 +1,20 @@
+version: '3'
+
+tasks:
+  build:
+    desc: "Build the Go application"
+    cmds:
+      - mkdir -p "./build"
+      - go build -o ./build/main ./src/main.go
+
+  run:
+    desc: "Run application"
+    deps: [build]
+    cmds:
+      - ./build/main
+
+  clean:
+      desc: "Clean build artifacts"
+      cmds:
+        - rm -rf  build
+        - curl -X DELETE "http://localhost:9200/places"
