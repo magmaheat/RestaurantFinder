@@ -14,7 +14,7 @@ tasks:
       - ./build/main
 
   clean:
-      desc: "Clean build artifacts"
-      cmds:
-        - rm -rf  build
-        - curl -X DELETE "http://localhost:9200/places"
+    desc: "Clean build artifacts"
+    cmds:
+      - rm -rf  build
+      - curl -X DELETE "http://localhost:9200/places"

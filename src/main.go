@@ -10,6 +10,8 @@ import (
 	"net/http"
 )
 
+//brew install go-task/tap/go-task
+
 func main() {
 	if len(token.MySigningKey) == 0 {
 		log.Fatal("MY_SIGNING_KEY environment variable is not set")
